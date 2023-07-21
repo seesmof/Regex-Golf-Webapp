@@ -3,7 +3,10 @@ import { useState } from "react";
 function App() {
   return (
     <>
-      <div className="fle">Regex Golf</div>
+      <div className="flex flex-col p-4 space-y-2">
+        <h1 className="text-3xl">Regex Golf</h1>
+        <a href="#">Learn More</a>
+      </div>
     </>
   );
 }
