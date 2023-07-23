@@ -1,13 +1,21 @@
-import { useState } from "react";
+import {
+  HashRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+import Home from "./pages/Home";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
-    <>
-      <div className="flex flex-col p-4 space-y-2">
-        <h1 className="text-3xl">Regex Golf</h1>
-        <a href="#">Learn More</a>
-      </div>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="*" element={<Navigate to="/404" />} />
+        <Route path="/404" element={<NotFound />} />
+      </Routes>
+    </Router>
   );
 }
 
